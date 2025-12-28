@@ -1,0 +1,99 @@
+:root{
+    --bg:#0b0b10;
+    --card:#12121a;
+    --text:#f4f4f6;
+    --muted:#b8b8c2;
+    --accent:#ff4da6;
+  }
+  
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: radial-gradient(1200px 600px at 20% 10%, #251126, var(--bg));
+    color:var(--text);
+  }
+  a{ color:inherit; }
+  
+  header.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 22px;
+    position:sticky;
+    top:0;
+    background: rgba(11,11,16,.7);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .brand{ font-weight:800; letter-spacing:.4px; }
+  
+  nav a{
+    text-decoration:none;
+    margin-left:14px;
+    opacity:.9;
+  }
+  nav a:hover{ opacity:1; }
+  
+  .cta{
+    padding:10px 14px;
+    border-radius:999px;
+    background: linear-gradient(90deg, var(--accent), #b83bff);
+  }
+  
+  main.wrap{
+    display:grid;
+    place-items:center;
+    padding: 40px 22px;
+  }
+  .card{
+    width:min(920px, 100%);
+    background: rgba(18,18,26,.65);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius: 22px;
+    padding: 34px;
+    box-shadow: 0 20px 80px rgba(0,0,0,.35);
+  }
+  h1{ font-size: clamp(2rem, 3vw, 3rem); margin:0 0 10px; }
+  p{ color:var(--muted); line-height:1.6; margin:0 0 18px; }
+  
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap:14px;
+    margin-top: 16px;
+  }
+  
+  .tile{
+    padding:16px;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,.12);
+    background: rgba(0,0,0,.15);
+  }
+  .tile h3{ margin:0 0 8px; }
+  
+  .btns{ display:flex; gap:12px; flex-wrap:wrap; margin-top: 10px; }
+  .btn{
+    display:inline-block;
+    padding:12px 16px;
+    border-radius: 14px;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,.14);
+  }
+  .btn.primary{
+    background: linear-gradient(90deg, var(--accent), #b83bff);
+    border:none;
+  }
+  
+  .footer{
+    padding: 18px 22px;
+    text-align:center;
+    color: rgba(255,255,255,.55);
+  }
+  .small{ font-size:.95rem; }
+  hr.sep{
+    border:none;
+    border-top:1px solid rgba(255,255,255,.12);
+    margin:18px 0;
+  }
+  
