@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Styled By Chee</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="index.html" class="brand brand-logo">
+        <img src="assets/img/logo.jpg" alt="Styled By Chee logo">
+        <span>Styled By Chee</span>
+      </a>
+      
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="policies.html">Policies</a>
+      <a class="cta" href="booking.html">Book Now</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h1>Contact</h1>
+      <p>For questions before booking, reach out using the options below.</p>
+
+      <div class="grid">
+        <div class="tile">
+          <h3>Instagram</h3>
+          <p class="small">DM me for quick questions or inspo pics.</p>
+          <a class="btn primary" href="https://instagram.com/styledbychee_" target="_blank" rel="noreferrer">
+            Open Instagram
+          </a>
+        </div>
+        <div class="tile">
+          <h3>Email</h3>
+          <p class="small">For detailed requests or collaborations.</p>
+          <a class="btn" href="mailto:styledbycheeofficial@gmail.com">Send an Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Styled By Chee</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Styled By Chee</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- ================= HEADER ================= -->
+  <header class="nav">
+    <a href="index.html" class="brand brand-logo">
+        <img src="assets/img/logo.jpg" alt="Styled By Chee logo">
+        <span>Styled By Chee</span>
+      </a>
+      
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="policies.html">Policies</a>
+    <a class="cta" href="booking.html">Book Now</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main class="wrap">
+    <section class="card">
+
+      <h1><strong>Styled by Chee </strong> </h1>
+      <h3>“Fulfilling Cosmetic Dreams”</h3>
+
+      <p>
+        Welcome to Styled By Chee! Your go to for neat, beautiful,
+        long-lasting styles with a soft touch. As a service provider who holds proper customer service in high regards, I try to do my best to provide quality, affordable services for my amazing clients.
+        I am located close to the University of Windsor.
+        Tap below to view services or book your appointment.
+      </p>
+
+      <div class="btns">
+        <a class="btn primary" href="booking.html">Book an Appointment</a>
+        <a class="btn" href="services.html">View Services</a>
+      </div>
+
+      <hr class="sep" />
+
+      <!-- ================= PORTFOLIO CAROUSEL ================= -->
+      <h2>Portfolio</h2>
+      <p class="small">Some of my work :) </p>
+
+      <div class="carousel portrait" id="portfolioCarousel" aria-label="Styled By Chee portfolio carousel">
+        <button class="carousel-btn prev" type="button" aria-label="Previous slide">‹</button>
+
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="assets/img/portfolio/1.jpg" alt="Styled By Chee style 1" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/img/portfolio/2.jpg" alt="Styled By Chee style 2" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/img/portfolio/3.jpg" alt="Styled By Chee style 3" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/img/portfolio/4.jpg" alt="Styled By Chee style 4" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/img/portfolio/5.jpg" alt="Styled By Chee style 5" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/img/portfolio/6.jpg" alt="Styled By Chee style 6" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/img/portfolio/7.jpg" alt="Styled By Chee style 7" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/img/portfolio/8.jpg" alt="Styled By Chee style 8" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/img/portfolio/9.jpg" alt="Styled By Chee style 9" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/img/portfolio/10.jpg" alt="Styled By Chee style 10" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/img/portfolio/11.jpg" alt="Styled By Chee style 11" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/img/portfolio/12.jpg" alt="Styled By Chee style 12" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/img/portfolio/13.jpg" alt="Styled By Chee style 13" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/img/portfolio/14.jpg" alt="Styled By Chee style 14" loading="lazy"></div>
+          </div>
+        </div>
+
+        <button class="carousel-btn next" type="button" aria-label="Next slide">›</button>
+        <div class="carousel-dots" role="tablist" aria-label="Carousel navigation dots"></div>
+      </div>
+
+      <hr class="sep" />
+
+      <!-- ================= INFO GRID ================= -->
+      <div class="grid">
+        <div class="tile">
+          <h3>Detailed Services</h3>
+          <p class="small">Browse prices, durations, add-ons, prep, and what to come with.</p>
+          <a class="btn" href="services.html">Go to Services</a>
+        </div>
+
+        <div class="tile">
+          <h3>Online Booking</h3>
+          <p class="small">Choose a time that works. You’ll receive a confirmation email automatically.</p>
+          <a class="btn primary" href="booking.html">Book Now</a>
+        </div>
+
+        <div class="tile">
+          <h3>Policies</h3>
+          <p class="small">Deposit, cancellation, late fees, and prep requirements.</p>
+          <a class="btn" href="policies.html">View Policies</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Styled By Chee</p>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

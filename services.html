@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services | Styled By Chee</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <a href="index.html" class="brand brand-logo">
+        <img src="assets/img/logo.jpg" alt="Styled By Chee logo">
+        <span>Styled By Chee</span>
+      </a>      
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="policies.html">Policies</a>
+      <a class="cta" href="booking.html">Book Now</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h1>Services</h1>
+      <p>Here are my currently offered Services. Final price may vary by length, size, style etc. Book online to see exact price and service options.</p>
+
+      <div class="slider-wrapper">
+        <button type="button" class="slide-btn left" id="slideLeftBtn">‹</button>
+      
+        <div class="slider" id="servicesSlider">
+      
+          <div class="slide">
+            <h3>Knotless Braids and Twists</h3>
+            <p class="small">Knotless braids are a modern, lightweight braiding style where extensions are fed in gradually instead of being tied into a knot at the base.</p>
+            <p class="small">Sizes offered: Smedium / Medium / Large</p>
+          </div>
+      
+          <div class="slide">
+            <h3>Stitch Braids</h3>
+            <p class="small">Stitch braids are a sleek cornrow style known for clean, precise parting and a sharp, polished finish.</p>
+            <p class="small">Can be done with or without extensions.</p>
+          </div>
+      
+          <div class="slide">
+            <h3>Twists</h3>
+            <p class="small">Twists are a low-tension protective style created by twisting two strands together.</p>
+            <p class="small">Can be done with or without extensions.</p>
+          </div>
+      
+          <div class="slide">
+            <h3>Single Braids</h3>
+            <p class="small">Single braids are individual, free-hanging braids offering a classic protective style.</p>
+            <p class="small">Sizes: Small / Smedium / Medium</p>
+          </div>
+      
+          <div class="slide">
+            <h3>Butterfly & Soft Locs</h3>
+            <p class="small">Faux loc styles with distressed (butterfly) or smooth (soft) finishes.</p>
+            <p class="small">Sizes: Smedium / Medium</p>
+          </div>
+      
+          <div class="slide">
+            <h3>Fulani Styles</h3>
+            <p class="small">Includes Fulani braids, Fulani sew-ins, and Fulani quick weaves.</p>
+            <p class="small">With or without extensions.</p>
+          </div>
+      
+          <div class="slide">
+            <h3>Ponytail & Updo Styles</h3>
+            <p class="small">Sleek ponytails, buns, and creative updos.</p>
+            <p class="small">With or without extensions.</p>
+          </div>
+
+          <div class="slide">
+            <h3>Locs</h3>
+            <p class="small">Starter locs using twists, coils or braids</p>
+            <p class="small">Retwist options offered are: Palmrolling, inter-locking, two-strand retwists and barrel twists</p>
+          </div> 
+
+          <div class="slide">
+            <h3>Quick Weaves</h3>
+            <p class="small">A protective style where tracks are bonded onto a wig cap (not directly on your hair) for a sleek sew-in look in less time.</p>
+            <p class="small">Best for: short-term installs, quick transformations, and low-maintenance styling. Can be done with/without a leave-out. </p>
+          </div>
+
+          <div class="slide">
+            <h3>Sew-ins</h3>
+            <p class="small">A long-lasting install where extensions are sewn onto braided foundation rows for a secure, natural look and versatile styling.</p>
+            <p class="small">Options: Leave-out sew-in, Closure sew-in.</p>
+          </div>
+
+          <div class="slide">
+            <h3>Pre-Parting </h3>
+            <p class="small">Need clean, straight parts but plan to install the style yourself? I’ll section and pre-part your hair neatly so you can braid or twist at home.</p>
+            <p class="small">Sizes offered: Small / Smedium / Medium</p>
+          </div>
+
+          <div class="slide">
+            <h3>Line-ups & Fades</h3>
+            <p class="small">Clean, sharp line-ups and tapered fades to refresh your look and keep your cut looking crisp.</p>
+            <p class="small">Options: Line-up only, Low fade, Mid fade, Taper fade.</p>
+            <p class="small">Best for a fresh finish after protective styles</p>
+          </div>
+
+          <div class="slide">
+            <h3>Brow Shaping & Tint</h3>
+            <p class="small">Brow shaping to clean up and define your natural brow line, plus optional tint for a fuller, more polished look.</p>
+          </div>
+          
+          
+          
+          
+          
+          
+
+      
+        </div>
+      
+        <button type="button" class="slide-btn right" id="slideRightBtn">›</button>
+      </div>
+      <p class="small">Please read my <a href="policies.html">Policies</a> before booking.</p>
+
+
+      <div class="btns">
+        <a class="btn primary" href="booking.html">Book Now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Styled By Chee</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  
+      const slider = document.getElementById("servicesSlider");
+      const leftBtn = document.getElementById("slideLeftBtn");
+      const rightBtn = document.getElementById("slideRightBtn");
+  
+      if (!slider) {
+        console.error("servicesSlider not found");
+        return;
+      }
+  
+      const getStep = () =>
+        slider.querySelector(".slide")?.offsetWidth + 16 || 320;
+  
+      leftBtn.addEventListener("click", () => {
+        slider.scrollBy({ left: -getStep(), behavior: "smooth" });
+      });
+  
+      rightBtn.addEventListener("click", () => {
+        slider.scrollBy({ left: getStep(), behavior: "smooth" });
+      });
+    });
+  </script>
+  
+</body>
+</html>

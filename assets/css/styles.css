@@ -1,0 +1,342 @@
+:root{
+    --bg:#dd2480;
+    --card:#12121a;
+    --text:#eba5c6;
+    --muted:#b8b8c2;
+    --accent:#ff4da6;
+  }
+  
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: radial-gradient(1200px 600px at 20% 10%, #251126, var(--bg));
+    color:var(--text);
+  }
+  a{ color:inherit; }
+  
+  header.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 22px;
+    position:sticky;
+    top:0;
+    background: rgba(11,11,16,.7);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .brand{ font-weight:800; letter-spacing:.4px; }
+  
+  nav a{
+    text-decoration:none;
+    margin-left:14px;
+    opacity:.9;
+  }
+  nav a:hover{ opacity:1; }
+  
+  .cta{
+    padding:10px 14px;
+    border-radius:999px;
+    background: linear-gradient(90deg, var(--accent), #b83bff);
+  }
+  
+  main.wrap{
+    display:grid;
+    place-items:center;
+    padding: 40px 22px;
+  }
+  .card{
+    width:min(920px, 100%);
+    background: rgba(18,18,26,.65);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius: 22px;
+    padding: 34px;
+    box-shadow: 0 20px 80px rgba(0,0,0,.35);
+  }
+  h1{ font-size: clamp(2rem, 3vw, 3rem); margin:0 0 10px; }
+  p{ color:var(--muted); line-height:1.6; margin:0 0 18px; }
+  
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap:14px;
+    margin-top: 16px;
+  }
+  
+  .tile{
+    padding:16px;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,.12);
+    background: rgba(0,0,0,.15);
+  }
+  .tile h3{ margin:0 0 8px; }
+  
+  .btns{ display:flex; gap:12px; flex-wrap:wrap; margin-top: 10px; }
+  .btn{
+    display:inline-block;
+    padding:12px 16px;
+    border-radius: 14px;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,.14);
+  }
+  .btn.primary{
+    background: linear-gradient(90deg, var(--accent), #b83bff);
+    border:none;
+  }
+  
+  .footer{
+    padding: 18px 22px;
+    text-align:center;
+    color: rgba(255,255,255,.55);
+  }
+  .small{ font-size:.95rem; }
+  hr.sep{
+    border:none;
+    border-top:1px solid rgba(255,255,255,.12);
+    margin:18px 0;
+  }
+  .slider-wrapper {
+    position: relative;
+    margin-top: 1.5rem;
+  }
+  
+  .slider {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+  }
+  
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slide {
+    min-width: 280px;
+    max-width: 280px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.2rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  
+  .slide h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.45rem 0.75rem;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.85;
+  }
+  
+  .slide-btn.left {
+    left: -12px;
+  }
+  
+  .slide-btn.right {
+    right: -12px;
+  }
+  
+  @media (max-width: 600px) {
+    .slide-btn {
+      display: none;
+    }
+  }
+  .slide {
+    background: rgba(0,0,0,.18);
+    border: 1px solid rgba(255,255,255,.12);
+  }
+  
+  .slide h3 { color: var(--text); }
+  .slide p { color: var(--muted); }
+/* ===== Portfolio Carousel ===== */
+.carousel{
+    position:relative;
+    margin-top: 14px;
+    border-radius: 18px;
+    border:1px solid rgba(255,255,255,.12);
+    background: rgba(0,0,0,.12);
+    overflow:hidden;
+  }
+  
+  .carousel-viewport{
+    overflow:hidden;
+  }
+  
+  .carousel-track{
+    display:flex;
+    transition: transform 450ms ease;
+    will-change: transform;
+  }
+  
+  .carousel-slide{
+    min-width:100%;
+    padding: 10px;
+  }
+  
+  .carousel-slide{
+    min-width:100%;
+    padding: 10px;
+    background: rgba(0,0,0,.18);
+  }
+  
+  .carousel-slide img{
+    width:100%;
+    height: 640px;          /* still tall */
+    object-fit: contain;    /* shows entire image */
+    object-position: center;
+    border-radius: 14px;
+    display:block;
+    background: rgba(0,0,0,.25);
+  }
+  
+  @media (max-width: 520px){
+    .carousel-slide img{ height: 420px; }
+  }
+  
+  
+  .carousel-btn{
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    border:none;
+    width:44px;
+    height:44px;
+    border-radius: 999px;
+    cursor:pointer;
+    background: rgba(0,0,0,.45);
+    color: var(--text);
+    font-size: 28px;
+    display:grid;
+    place-items:center;
+    z-index:2;
+    opacity: .95;
+  }
+  .carousel-btn:hover{ opacity:1; }
+  
+  .carousel-btn.prev{ left: 10px; }
+  .carousel-btn.next{ right: 10px; }
+  
+  .carousel-dots{
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    padding: 10px 10px 14px;
+  }
+  
+  .carousel-dot{
+    width:10px;
+    height:10px;
+    border-radius: 999px;
+    border:1px solid rgba(255,255,255,.35);
+    background: transparent;
+    cursor:pointer;
+    opacity:.85;
+  }
+  .carousel-dot.active{
+    background: rgba(255,255,255,.85);
+    opacity:1;
+  }
+  
+  /* Mobile height tweak */
+  @media (max-width: 520px){
+    .carousel-slide img{ height: 280px; }
+    .carousel-btn{ width:40px; height:40px; }
+  }
+  /* ===== Brand logo in header ===== */
+.brand-logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+  }
+  
+  .brand-logo img{
+    height:42px;
+    width:42px;          /* makes it a square */
+    object-fit:cover;    /* fills the circle */
+    border-radius:50%;   /* 🔵 makes it round */
+  }
+  
+  
+  .brand-logo span{
+    font-weight:800;
+    letter-spacing:.4px;
+  }
+  /* ===== Services slider responsive fix ===== */
+.slider-wrapper{
+    width: 100%;
+    max-width: 920px;     /* matches your .card max feel */
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .slider{
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 52px;   /* space so arrows don’t cover content */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .slider::-webkit-scrollbar{ height: 10px; }
+  .slider::-webkit-scrollbar-thumb{
+    background: rgba(255,255,255,.18);
+    border-radius: 999px;
+  }
+  
+  .slide{
+    flex: 0 0 320px;      /* card width */
+    scroll-snap-align: start;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(0,0,0,.15);
+    border-radius: 16px;
+    padding: 16px;
+  }
+  
+  .slide-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    background: rgba(0,0,0,.45);
+    color: var(--text);
+    font-size: 28px;
+    display: grid;
+    place-items: center;
+    z-index: 2;
+  }
+  
+  .slide-btn.left{ left: 6px; }
+  .slide-btn.right{ right: 6px; }
+  
+  /* Mobile: make cards fit better */
+  @media (max-width: 520px){
+    .slider{ padding: 10px 44px; }
+    .slide{ flex-basis: 260px; }
+    .slide-btn{ width: 40px; height: 40px; }
+  }
+
+  
+  
+  
+  

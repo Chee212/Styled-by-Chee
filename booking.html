@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book | Styled By Chee</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="index.html" class="brand brand-logo">
+        <img src="assets/img/logo.jpg" alt="Styled By Chee logo">
+        <span>Styled By Chee</span>
+      </a>
+      
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="policies.html">Policies</a>
+      <a class="cta" href="booking.html">Book Now</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h1>Book an Appointment</h1>
+      <p>
+        You will be redirected to my booking site to select your service and time.
+        After booking, you will receive a confirmation email automatically.
+      </p>
+
+      <!-- EASIEST + MOST RELIABLE: booking link button -->
+      <div class="tile" style="margin: 14px 0;">
+        <h3>Important: Please read before booking</h3>
+        <p class="small">Bookings mean you agree to my policies (deposit, late policy, cancellations, prep).</p>
+        <a class="btn" href="policies.html">Read Policies</a>
+      </div>
+      
+      <div class="btns">
+        <a class="btn primary" href="https://YOUR-BOOKING-LINK-HERE" target="_blank" rel="noreferrer">
+        Click To Book An Appointment
+        </a>
+      </div>
+
+      <hr class="sep" />
+
+      <h2>Before you book: </h2>
+      <ul>
+        <li>Double-check your email is typed correctly (this is where your confirmation will go).</li>
+        <li>Please review policies on the Services page.</li>
+        <li>If you have questions, message me on Instagram or use the Contact page.</li>
+        <p>Thank you! </p>
+      </ul>
+
+      <!-- OPTIONAL: embed widget (platform-dependent)
+      If your platform provides an iframe embed code, paste it here instead of the button above.
+      -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Styled By Chee</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
