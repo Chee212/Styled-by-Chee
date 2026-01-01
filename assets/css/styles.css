@@ -22,6 +22,7 @@
     padding:18px 22px;
     position:sticky;
     top:0;
+    z-index:9999;
     background: rgba(11,11,16,.7);
     backdrop-filter: blur(10px);
     border-bottom:1px solid rgba(255,255,255,.08);
@@ -403,3 +404,4 @@ button, .btn, .cta, input, select, textarea {
   
 
   
+
