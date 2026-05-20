@@ -396,7 +396,75 @@ button, .btn, .cta, input, select, textarea {
     padding: 16px;
   }
 }
+#chee-chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+}
 
+#chee-toggle {
+  background: #3b241f;
+  color: white;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+#chee-box {
+  display: none;
+  width: 330px;
+  background: #fff8f3;
+  border: 1px solid #e5d2c5;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+}
+
+#chee-header {
+  background: #3b241f;
+  color: white;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chee-close {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#chee-messages {
+  padding: 15px;
+  max-height: 280px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+#chee-options {
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#chee-options button,
+.chee-choice {
+  background: #d8a7a7;
+  color: #2b1b18;
+  border: none;
+  padding: 9px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+}
 
 
   
