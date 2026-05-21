@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Client Dashboard | Styled By Chee</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<h1>Welcome back mlll 💕</h1>
+
+<p>This is your Styled By Chee client dashboard.</p>
+
+<div id="chee-chatbot">
+  <button id="chee-toggle">Chat with Chee 💕</button>
+
+  <div id="chee-box">
+
+    <div id="chee-header">
+      <strong>Chee</strong>
+      <button id="chee-close">×</button>
+    </div>
+
+    <div id="chee-messages"></div>
+
+    <form id="chee-form">
+
+      <input
+        id="chee-input"
+        type="text"
+        placeholder="Message Chee..."
+      >
+
+      <button type="submit">Send</button>
+
+    </form>
+
+  </div>
+</div>
+
+<script src="assets/js/chee.js"></script>
+
+</body>
+</html>
