@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Login | Styled By Chee</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+<section class="login-page">
+
+  <h1>Styled By Chee 💕</h1>
+  <p>Client Portal</p>
+
+<p class="client-note">
+  Please note: only clients who have previously had an appointment with Styled By Chee can create a client account 💕
+</p>
+
+  <input id="client-email" type="email" placeholder="Email">
+
+  <input id="client-password" type="password" placeholder="Password">
+
+  <button onclick="handleSignup()">Create Account</button>
+
+  <button onclick="handleLogin()">Login</button>
+
+</section>
+
+<script src="assets/js/chee-auth.js"></script>
+
+</body>
+</html>
