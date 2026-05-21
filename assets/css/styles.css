@@ -465,6 +465,47 @@ button, .btn, .cta, input, select, textarea {
   cursor: pointer;
   font-size: 13px;
 }
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff8f3;
+  padding: 20px;
+}
+
+.login-page h1 {
+  color: #3b241f;
+  margin-bottom: 10px;
+}
+
+.login-page input {
+  width: 300px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+}
+
+.login-page button {
+  width: 300px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 14px;
+  background: #3b241f;
+  color: white;
+  cursor: pointer;
+}
+.client-note {
+  max-width: 320px;
+  text-align: center;
+  font-size: 14px;
+  color: #6d5b57;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
 
 
   
