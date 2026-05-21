@@ -1,0 +1,49 @@
+const SUPABASE_URL = "https://YOUR_PROJECT_ID.supabase.co";
+const SUPABASE_ANON_KEY = "PASTE_YOUR_PUBLIC_ANON_KEY";
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+async function handleSignup() {
+  const email = document.getElementById("client-email").value.trim().toLowerCase();
+  const password = document.getElementById("client-password").value;
+
+  const { data: approvedClient, error: checkError } = await supabaseClient
+    .from("approved_clients")
+    .select("*")
+    .eq("email", email)
+    .single();
+
+  if (checkError || !approvedClient) {
+    alert("Only clients who have previously booked an appointment with Styled By Chee can create an account 💕");
+    return;
+  }
+
+  const { error } = await supabaseClient.auth.signUp({
+    email,
+    password
+  });
+
+  if (error) {
+    alert(error.message);
+    return;
+  }
+
+  alert("Account created! Check your email to confirm it.");
+}
+
+async function handleLogin() {
+  const email = document.getElementById("client-email").value.trim().toLowerCase();
+  const password = document.getElementById("client-password").value;
+
+  const { error } = await supabaseClient.auth.signInWithPassword({
+    email,
+    password
+  });
+
+  if (error) {
+    alert(error.message);
+    return;
+  }
+
+  alert("You’re logged in 💕");
+}
