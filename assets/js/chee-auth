@@ -45,5 +45,5 @@ async function handleLogin() {
     return;
   }
 
-  alert("You’re logged in 💕");
+ window.location.href = "client-dashboard.html";
 }
